@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Dashboard</title>
+  <link rel="stylesheet" href="shared.css"/>
+  <link rel="stylesheet" href="dashboard.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="nav-brand">⬡ Nexus</div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="login.html">Login</a>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+    <!-- macOS window -->
+    <div class="window-wrap">
+
+      <!-- Title bar -->
+      <div class="window-titlebar">
+        <div class="titlebar-dots">
+          <div class="dot-btn red"></div>
+          <div class="dot-btn yellow"></div>
+          <div class="dot-btn green"></div>
+        </div>
+        <div class="titlebar-search">
+          <span>🔍</span>
+          <span>Search…</span>
+        </div>
+        <div class="titlebar-right">
+          <span class="titlebar-date">DATE RANGE</span>
+          <div class="titlebar-info">i</div>
+        </div>
+      </div>
+
+      <!-- Dashboard content -->
+      <div class="dash-grid">
+
+        <!-- Task List -->
+        <div class="card task-card" style="--delay:.05s">
+          <p class="card-label">Task List</p>
+          <ul class="task-list">
+            <li><span class="tdot green"></span><span class="ttext done">Review Codebase</span></li>
+            <li><span class="tdot green"></span><span class="ttext done">Write Documentation</span></li>
+            <li><span class="tdot orange"></span><span class="ttext">Prepare Demo Presentation</span></li>
+            <li><span class="tdot red"></span><span class="ttext">Plan New Project</span></li>
+          </ul>
+          <div class="progress-wrap">
+            <div class="prog-bar" id="progBar"></div>
+          </div>
+          <div class="prog-labels">
+            <span class="prog-tag">PROGRESS THIS</span>
+            <span class="prog-pct">64%</span>
+          </div>
+        </div>
+
+        <!-- Analytics Chart -->
+        <div class="card chart-card" style="--delay:.1s">
+          <div class="chart-header">
+            <p class="card-label" style="margin:0">Analytics completed</p>
+            <span class="badge">64%</span>
+          </div>
+          <div class="chart-body">
+            <canvas id="analyticsChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Weather -->
+        <div class="card weather-card" style="--delay:.15s">
+          <div class="weather-top">
+            <p class="card-label" style="margin:0">Weather</p>
+            <span class="weather-sun">☀️</span>
+          </div>
+          <div class="weather-temp">72°</div>
+          <div class="weather-condition">Sunny</div>
+          <div class="weather-row">
+            <div class="wstat"><span class="wval">0</span><span class="wlbl">Sunrise</span></div>
+            <div class="wstat"><span class="wval">29</span><span class="wlbl">Humidity</span></div>
+            <div class="wstat"><span class="wval">11h</span><span class="wlbl">Daylight</span></div>
+          </div>
+        </div>
+
+        <!-- Daily Goals -->
+        <div class="card goals-card" style="--delay:.2s">
+          <p class="card-label">Daily Goals</p>
+          <ul class="goal-list">
+            <li>
+              <label class="goal-item">
+                <input type="checkbox" id="g1"/>
+                <span class="goal-check"></span>
+                <span>Finish Reading Chapter</span>
+              </label>
+              <span class="goal-arrow">›</span>
+            </li>
+            <li>
+              <label class="goal-item">
+                <input type="checkbox" id="g2"/>
+                <span class="goal-check"></span>
+                <span>Go for a Run</span>
+              </label>
+              <span class="goal-arrow">›</span>
+            </li>
+            <li>
+              <label class="goal-item">
+                <input type="checkbox" id="g3"/>
+                <span class="goal-check"></span>
+                <span>Drink 8 Glasses of Water</span>
+              </label>
+              <span class="goal-arrow">›</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Stats -->
+        <div class="card stats-card" style="--delay:.25s">
+          <p class="card-label">Analytics</p>
+          <div class="stats-grid">
+            <div class="sblock purple">
+              <div class="sblock-top">
+                <span class="sval" data-target="32">0</span>
+                <span class="sicon purple-bg">⬆</span>
+              </div>
+              <span class="slbl">Hours Used</span>
+            </div>
+            <div class="sblock blue">
+              <div class="sblock-top">
+                <span class="sval" data-target="32">0</span>
+                <span class="sicon blue-bg">⬆</span>
+              </div>
+              <span class="slbl">Hour Saved</span>
+            </div>
+            <div class="sblock teal">
+              <div class="sblock-top">
+                <span class="sval" data-target="12">0</span>
+                <span class="sicon teal-bg">⬆</span>
+              </div>
+              <span class="slbl">Tasks</span>
+            </div>
+            <div class="sblock yellow">
+              <div class="sblock-top">
+                <span class="sval" data-target="172">0</span>
+                <span class="sicon yellow-bg">⬆</span>
+              </div>
+              <span class="slbl">Testimonies</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notes -->
+        <div class="card notes-card" style="--delay:.3s">
+          <p class="card-label">Notes</p>
+          <div class="sticky-note" contenteditable="true">
+            Remember to schedule a call — ask the client tomorrow.
+          </div>
+        </div>
+
+      </div><!-- /dash-grid -->
+    </div><!-- /window-wrap -->
+  </div><!-- /page-wrap -->
+
+  <script src="shared.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

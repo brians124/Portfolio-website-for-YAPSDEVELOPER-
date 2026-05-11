@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="shared.css"/>
+  <link rel="stylesheet" href="portfolio.css"/>
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="nav-brand">⬡ Nexus</div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="login.html">Login</a>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+    <div class="window-wrap">
+
+      <!-- Title bar -->
+      <div class="window-titlebar">
+        <div class="titlebar-dots">
+          <div class="dot-btn red"></div>
+          <div class="dot-btn yellow"></div>
+          <div class="dot-btn green"></div>
+        </div>
+        <div class="titlebar-right">
+          <nav class="inner-nav">
+            <a href="#">Home</a>
+            <a href="#projects">Portfolio</a>
+            <a href="#">About</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <span class="titlebar-search-icon">🔍</span>
+        </div>
+      </div>
+
+      <!-- Portfolio content -->
+      <div class="portfolio-body">
+
+        <!-- Hero -->
+        <section class="hero-section" style="--delay:.05s">
+          <div class="hero-text">
+            <h1 class="hero-name">Hi, I'm John Doe 👋</h1>
+            <p class="hero-role">Frontend Developer</p>
+            <p class="hero-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
+            <div class="hero-btns">
+              <button class="btn-gold">John More</button>
+              <button class="btn-dots">• • •</button>
+            </div>
+          </div>
+          <div class="hero-photo">
+            <div class="hero-photo-inner">
+              <div class="hero-avatar">👨‍💻</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Bottom: Projects + Sidebar -->
+        <div class="bottom-layout">
+
+          <!-- Projects -->
+          <div class="projects-col">
+            <p class="section-label">Featured Projects</p>
+            <div class="projects-grid">
+              <div class="proj-card" style="--delay:.1s">
+                <div class="proj-thumb t1">📊</div>
+                <div class="proj-body">
+                  <p class="proj-name">Project One</p>
+                  <p class="proj-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh.</p>
+                  <div class="proj-footer">
+                    <span class="proj-tag">React</span>
+                    <a href="#" class="proj-link">View More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="proj-card" style="--delay:.15s">
+                <div class="proj-thumb t2">🎨</div>
+                <div class="proj-body">
+                  <p class="proj-name">Project Two</p>
+                  <p class="proj-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh.</p>
+                  <div class="proj-footer">
+                    <span class="proj-tag">CSS</span>
+                    <a href="#" class="proj-link">View More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="proj-card" style="--delay:.2s">
+                <div class="proj-thumb t3">📱</div>
+                <div class="proj-body">
+                  <p class="proj-name">Project Three</p>
+                  <p class="proj-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh.</p>
+                  <div class="proj-footer">
+                    <span class="proj-tag">Vue</span>
+                    <a href="#" class="proj-link">View More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar: About + Contact -->
+          <div class="sidebar-col" id="contact">
+            <div class="card about-card" style="--delay:.1s">
+              <p class="card-label">About Me</p>
+              <p class="about-text">I build modern and responsive web applications with a focus on frontend development.</p>
+            </div>
+            <div class="card contact-card" style="--delay:.15s">
+              <p class="card-label">Contact Me</p>
+              <div class="contact-form">
+                <input type="text"   class="form-input" placeholder="Name"/>
+                <input type="email"  class="form-input" placeholder="Email"/>
+                <textarea class="form-input form-ta" placeholder="Message"></textarea>
+                <button class="btn-gold send-btn" id="sendBtn">Send</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /portfolio-body -->
+    </div><!-- /window-wrap -->
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="portfolio.js"></script>
+</body>
+</html>

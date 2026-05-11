@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="shared.css"/>
+  <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="nav-brand">⬡ Nexus</div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="login.html" class="active">Login</a>
+    </div>
+  </nav>
+
+  <main class="login-main">
+    <!-- Glow orbs -->
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+
+    <!-- macOS window card -->
+    <div class="login-window window-wrap">
+      <div class="window-titlebar">
+        <div class="titlebar-dots">
+          <div class="dot-btn red"></div>
+          <div class="dot-btn yellow"></div>
+          <div class="dot-btn green"></div>
+        </div>
+      </div>
+
+      <div class="login-body">
+        <h1 class="login-title">Welcome back</h1>
+
+        <div class="field-group">
+          <label class="field-lbl">Email</label>
+          <input type="email" id="emailIn" class="form-input" placeholder="Enter your email"/>
+          <span class="field-err" id="emailErr"></span>
+        </div>
+
+        <div class="field-group">
+          <label class="field-lbl">Password</label>
+          <div class="pw-wrap">
+            <input type="password" id="pwIn" class="form-input" placeholder="••••••••"/>
+            <button class="pw-toggle" id="pwToggle" title="Show password">👁</button>
+            <button class="pw-icon2" title="Biometrics">🔑</button>
+          </div>
+          <span class="field-err" id="pwErr"></span>
+        </div>
+
+        <a href="#" class="forgot-link">Forgot password?</a>
+
+        <button class="btn-login" id="loginBtn">
+          <span class="btn-txt">Login</span>
+          <span class="btn-spin" id="btnSpin"></span>
+        </button>
+
+        <p class="signup-row">Don't have an account? <a href="#" class="signup-link">Sign up</a></p>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="shared.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
